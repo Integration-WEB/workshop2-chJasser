@@ -1,0 +1,47 @@
+.text {
+  font-size: 20px;
+  color: red;
+}
+h1 {
+  @extend .text;
+}
+text-area {
+  @extend .text;
+}
+@mixin border($width: 3px, $border: solid, $color: yellow) {
+  border: $width $border $color;
+}
+
+.btn {
+  @include border();
+}
+
+@function background($color) {
+  @if ($color ==white) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+h5 {
+  color: background(white);
+}
+h6 {
+  color: background(black);
+}
+$langages: "HTML5", "CSS3", "JAVA", "React", "Spring";
+
+@function first($lg: list) {
+  @return nth($lg, 1);
+}
+@function last($lg: list) {
+  @return nth($lg, -1);
+  @return nth($lg, length($lg));
+}
+
+.text1 {
+  content: first($langages);
+}
+.text2 {
+  content: last($langages);
+}

@@ -1,0 +1,26 @@
+.text, text-area, h1 {
+  font-size: 20px;
+  color: red;
+}
+
+.btn {
+  border: 3px solid yellow;
+}
+
+h5 {
+  color: black;
+}
+
+h6 {
+  color: white;
+}
+
+.text1 {
+  content: "HTML5";
+}
+
+.text2 {
+  content: "Spring";
+}
+
+/*# sourceMappingURL=style.css.map */
